@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Drobnjak.Application\Drobnjak.Application.csproj" />
+    <ProjectReference Include="..\Drobnjak.DataAccess\Drobnjak.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
