@@ -6,6 +6,7 @@ using Drobnjak.Application.DataTransfer;
 using Drobnjak.Application.Commands;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Drobnjak.Application.Exceptions;
 
 namespace API.Controllers
 {
@@ -40,7 +41,11 @@ namespace API.Controllers
             try
             {
                 _creatFilm.Execute(dto);
-                return Ok();
+                return StatusCode(201);
+            }
+            catch (EntityNotFoundException e)
+            {
+                return UnprocessableEntity(e.Message);
             }
             catch (Exception)
             {

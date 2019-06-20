@@ -17,6 +17,7 @@ namespace Drobnjak.EfCommands
         }
         public void Execute(CreatFilmDto request)
         {
+            
             _context.Film.Add(new Film {
 
                 Naziv = request.Naziv,
